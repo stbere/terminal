@@ -30,8 +30,10 @@
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Storage.h>
+#include <winrt/Windows.Storage.Streams.h>
 #include <winrt/Windows.System.h>
 #include <winrt/Windows.UI.Core.h>
+#include <winrt/Windows.UI.ViewManagement.h>
 #include <winrt/Windows.UI.Xaml.Controls.h>
 #include <winrt/Windows.UI.Xaml.Media.h>
 
@@ -49,10 +51,11 @@ TRACELOGGING_DECLARE_PROVIDER(g_hSettingsModelProvider);
 #include <TraceLoggingActivity.h>
 
 // JsonCpp
-#include <json.h>
+#include <json/json.h>
 
 // Manually include til after we include Windows.Foundation to give it winrt superpowers
 #include "til.h"
+#include <til/winrt.h>
 
 #include <til/mutex.h>
 #include <til/throttled_func.h>
